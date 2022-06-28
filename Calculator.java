@@ -25,8 +25,8 @@ public class Calculator extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField input;
-	private double answer, number;         //ozumuz yazdiq
-	int operation;                   //+++
+	private double answer, number;         
+	int operation;                   
 
 	/**
 	 * Launch the application.
@@ -44,15 +44,15 @@ public class Calculator extends JFrame {
 		});
 	}
 	
-	//ekrana 0'a basanda 0 cixmagi ucun umumi funksiya yaziriq
+	
 	
 	public void addInput(String str) {
-		input.setText(input.getText() + str);   //+++
+		input.setText(input.getText() + str);  
 	}
 	public void calculate() {
 		switch (operation) {
 		case 1:
-			answer = number + Double.parseDouble(input.getText()); //++++
+			answer = number + Double.parseDouble(input.getText()); 
 			input.setText(Double.toString(answer));
 			break;
 		case 2:
@@ -126,7 +126,7 @@ public class Calculator extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				number = Double.parseDouble(input.getText());
-				operation = 1;   //toplama case 1 de idi
+				operation = 1;   
 				input.setText("");
 				lbl.setText(number + e.getActionCommand());				
 			}
